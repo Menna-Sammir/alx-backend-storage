@@ -15,8 +15,10 @@ print(s3)
 s4 = replay(cache.store)
 print(s4)
 
-inputs = cache._redis.lrange("{}:inputs".format(cache.store.__qualname__), 0, -1)
-outputs = cache._redis.lrange("{}:outputs".format(cache.store.__qualname__), 0, -1)
+inputs = cache._redis.lrange("{}:inputs".
+                             format(cache.store.__qualname__), 0, -1)
+outputs = cache._redis.lrange("{}:outputs".
+                              format(cache.store.__qualname__), 0, -1)
 
 print("inputs: {}".format(inputs))
 print("outputs: {}".format(outputs))
